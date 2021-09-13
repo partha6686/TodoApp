@@ -1,0 +1,208 @@
+body{
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: hsl(235, 21%, 11%);
+    color: white;
+    font-size: 18px;
+}
+hr{
+    border: none;
+    border-top: 1px solid;
+    /* border-color: ; */
+    margin: 0;
+}
+
+.header-img{
+    position: absolute;
+    width: 100%;
+}
+
+/*set the width,margin z-index of the container */
+.container{
+    width: 500px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    padding-top: 50px;
+}
+
+/*give some margin top tho the theme change icon*/
+.theme-icon{
+    margin: auto 0;
+}
+
+/* set flex properties  */
+.container-heading, .todo-footer, .middle-footer, .todo-list-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* customize the input box  */
+.add-todo-input {
+    width: 470px;
+    height: 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color:  hsl(235, 24%, 19%);
+    border: none;
+    color: white;
+}
+
+.add-to-list{
+    float: right;
+    position: relative;
+    bottom: 40px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* customize the todo list */
+.todo-list{
+    background-color:  hsl(235, 24%, 19%);
+    margin: 2rem 0 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    /* height: ; */
+}
+.todo-list-item{
+    padding: 20px 20px;
+    border-bottom: 1px solid hsl(233, 14%, 35%);
+}
+
+/* customize the check box */
+.todo-list-label{
+    position: relative;
+    cursor: pointer;
+    padding-left: 45px;
+    padding-top: 6px;
+    
+}
+/* Create a custom checkbox */
+.todo-list-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 100%;
+    border: 2px solid hsl(233, 14%, 35%);
+}
+/* change the background color of the check btn on hover */
+.todo-list-label:hover input ~ .checkmark {
+    border-color: hsl(210, 100%, 67%);
+}
+
+.inactiveTodo{
+    background-image: url(../images/icon-check.svg),linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+.inactiveTodoLabel{
+    color: hsl(236, 9%, 55%);
+    text-decoration: line-through;
+}
+
+.delete-todo-icon{
+    cursor: pointer;
+}
+
+/* style the footer inside the .container */
+.todo-footer{
+    background-color: hsl(235, 24%, 19%);
+    margin-top: 0;
+    padding: 15px 20px; 
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    
+}
+/* footer outside the .container */
+.footer{
+    text-align: center;
+    margin: 4rem 0 1rem;
+}
+.middle-footer a{
+    padding: 3px 10px 0;
+}
+
+hr,a, .footer{
+    text-decoration: none;
+    color: hsl(233, 14%, 35%);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ! ON CLICKING ON THE FOOTER LINKS THE COLOR OF THE LINKS ARE CHANGED */
+.add-link-color{
+    color: hsl(210, 100%, 67%) !important;
+}
+
+/* ! CLASSES FOR LIGHT THEME  */
+.body-t2{
+    background-color: hsl(236, 33%, 92%);
+}
+.add-todo-input-t2, .todo-list-t2, .todo-footer-t2{
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(235, 19%, 35%);
+}
+.checkmark-t2{
+    background-color: hsl(0, 0%, 98%);
+    border-color: hsl(233, 11%, 84%);
+}
+.todo-list-item-t2{
+    border-bottom-color: hsl(233, 11%, 84%);
+}
+.todo-footer-t2 a, .footer-t2{
+    color: hsl(236, 9%, 61%);
+}
+.add-to-list-t2{
+    color: hsl(235, 19%, 35%);
+}
+
+/* ! MEDIA QUERRIES FOR MAX WIDTH 510 px  */
+@media (max-width: 510px) {
+    body{
+        font-size: 16px;
+    }
+    .container{
+        width: 340px;
+        margin: auto;
+    }
+    .add-todo-input{
+        width: 310px;
+    }
+    .delete-todo-icon{
+        padding-top: 10px;
+        height: 12px;
+    }
+    /* .middle-footer {
+        opacity: 0;
+    } */
+    hr,a, .footer{
+        font-size: 12px;
+    }
+    .middle-footer{
+        position: absolute;
+        bottom: -40px;
+        width: 80%;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+    }
+    .middle-footer a{
+        flex: 1;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Todo app</title>
+
+</head>
+<body>
+  <div class="header-img">
+    <img width="100%" height="300px" src="images/bg-desktop-dark.jpg">
+  </div>
+
+  <div class="container">
+
+    <div class="container-heading">
+      <h1>T O D O</h1>
+      <a class="theme-icon"><img src="images/icon-sun.svg"></img></a>
+    </div>
+
+    <div class="add-todo">
+      <form>
+        <input type="text" placeholder="Create a new todo..." value="" class="add-todo-input">
+        <div class="add-icon-bcg">
+          <i class="fas fa-plus-circle add-to-list"></i>
+        </div>
+      </form>
+    </div>
+
+    <div class="todo-list">
+      <!-- <div class="todo-list-item">
+        <label class="todo-list-label inactiveTodoLabel">
+          <input type="checkbox" checked="checked">
+          <span class="checkmark inactiveTodo"></span>
+          <span class="lebel-text">Jog around the park 3x </span>
+        </label>
+        <img class="delete-todo-icon" height="15px" src="images/icon-cross.svg">
+        <hr>
+      </div> -->
+    </div>
+    <div class="todo-footer">
+      <div><a class="total-active-todo" >0 items left</a></div>
+      <div class="middle-footer">
+        <a class="show-all">All</a>
+        <a class="show-active">Active</a>
+        <a class="show-completed">Completed</a>
+      </div>
+      <div>
+        <a class="clear-completed">Clear Completed</a>
+      </div>
+    </div>
+    
+  </div>
+  
+
+  <div class="footer">
+    <p>Drag and drop to reorder list</p>
+  </div>
+ 
+  <!-- external JS  -->
+  <script src="js/scripts.js"></script>
+
+  <!-- Font Awesome-JS -->
+  <script src="https://kit.fontawesome.com/fc87503880.js" crossorigin="anonymous"></script>
+</body>
+</html>
